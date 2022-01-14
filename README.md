@@ -11,7 +11,7 @@ Demo application for Skourse lecture Introduction to React.
 
 ## TODO:
 
-Create an button that will add a new post object to the posts state everytime the button is pressed.
+Create a button that will add a new post object to the posts state every time the button is pressed.
 
 Extras:
 
