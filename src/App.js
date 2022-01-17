@@ -2,6 +2,7 @@ import React from 'react';
 
 import Post from './Post';
 import './App.css';
+import AddPostButton from './AddPostButton';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,12 @@ class App extends React.Component {
     }
   }
 
+  addPost = () => {
+    this.setState({
+       posts: [...this.state.posts, {name: "Gian", content:"Gwapa kay ka", likes:2}]
+    })
+  }
+
 
   render() {
     return (
@@ -23,6 +30,7 @@ class App extends React.Component {
         {this.state.posts.map(post => (
           <Post name={post.name} content={post.content} likes={post.likes} />
         ))}
+        <AddPostButton addPostHandler={this.addPost} />
       </div>
     );
   }}
